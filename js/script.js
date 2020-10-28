@@ -1,5 +1,3 @@
-console.clear();
-
 const api = 'http://www.ghibli.jp/gallery/';
 const works = [
 	// {
@@ -161,18 +159,21 @@ class GhibliGallery {
 		this.bodyEl.onclick = (e) => {
 			if (e.target.className === 'button') {
 				const sectionEl = document.querySelector('section');
-				sectionEl.parentNode.removeChild(sectionEl);
+				this.removeElement(sectionEl);
 				this.updateGallerySection(e.target.id);
 				this.moveToGallery();
 			}
 		};
 	}
 
+	removeElement(el) {
+		el.parentNode.removeChild(el);
+	}
+
 	updateCatalog() {
 		const catalog = document.createElement('div');
 		catalog.classList.add('catalog');
-		this.bodyEl.appendChild(catalog);
-
+		
 		for (let i = 0; i < works.length; i++) {
 			const button = document.createElement('div');
 			button.classList.add('button');
@@ -180,12 +181,13 @@ class GhibliGallery {
 			button.textContent = works[i].name;
 			catalog.appendChild(button);
 		}
+
+		this.bodyEl.appendChild(catalog);
 	}
 
 	updateGallerySection(id = 0) {
 		const section = document.createElement('section');
-		this.bodyEl.appendChild(section);
-
+		
 		// Title
 		const title = document.createElement('H1');
 		title.textContent = `${works[id].name} (${works[id].publicTime})`;
@@ -203,6 +205,8 @@ class GhibliGallery {
 			img.src = imgUrl;
 			section.appendChild(img);
 		}
+
+		this.bodyEl.appendChild(section);
 	}
 
 	moveToGallery() {

@@ -7,7 +7,7 @@
 - 使用預處理器 Sass 撰寫 CSS、使用原生 JavaScript 物件導向式開發
 - 利用作品劇照原圖的網址命名邏輯，開發出新的作品劇照資料
 - 依照年份整合作品劇照資料，做出作品目錄
-- 透過點擊目錄作品，對劇照區塊做切換，達成不換頁觀看全部作品圖
+- 透過點擊作品目錄，對劇照區塊做切換，達成不換頁觀看全部作品圖
 - 將原本散佈式的劇照改為兩欄並排（手機ㄧ欄呈現），排版更為清晰友好
 - 使用 [Noto Serif JP](https://fonts.google.com/specimen/Noto+Serif+JP) 字體，統一日文字、數字與英文字的基線
-- [線上版](https://rayc2045.github.io/ghibli-gallery/)
+- [下載吉卜力工作室作品圖](https://rayc2045.github.io/ghibli-gallery/)

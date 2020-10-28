@@ -20,13 +20,18 @@ $black: #1E1F27
 html, body
 	margin: 0
 	padding: 0
+
+html
+	+flexCenter
 	font-size: 0.83vw
+	scroll-behavior: smooth
 
 body
 	+flexCenter
 	font-family: 'Noto Serif JP', serif
 	color: $white
 	background-color: $black
+	width: 83.28125vw
 
 .catalog
 	margin: 3rem 0
@@ -48,6 +53,7 @@ body
 section
 	margin-bottom: 1.5rem
 	padding: 0 0.7rem
+	height: 100vh // make window.scrollTo() enable
 	text-align: center
 	&:last-child
 		margin-bottom: 0
@@ -64,6 +70,9 @@ img
 @media screen and (max-width: 900px)
 	html
 		font-size: 12px
+
+	body
+		width: 100vw
 
 	img
 		width: 99%

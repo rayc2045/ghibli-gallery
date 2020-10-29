@@ -28,15 +28,30 @@ html
 
 body
 	+flexCenter
+	position: relative
+	width: 100vw
 	font-family: 'Noto Serif JP', serif
 	color: $white
 	background-color: $black
-	width: 83.28125vw
+
+.toTop
+	position: fixed
+	right: 3vw
+	bottom: 1vw
+	width: 4rem
+	text-align: center
+	font-size: 3rem
+	color: $white
+	cursor: pointer
+	transition: 1s
+	&.hide
+		bottom: -999px
 
 .catalog
 	margin: 3rem 0
 	margin-top: 7rem
 	padding: 0 15%
+	width: 83.28125vw
 	text-align: center
 	
 .button
@@ -53,6 +68,7 @@ body
 section
 	margin-bottom: 1.5rem
 	padding: 0 0.7rem
+	width: 83.28125vw
 	height: 100vh // make window.scrollTo() enable
 	text-align: center
 	&:last-child
@@ -71,7 +87,7 @@ img
 	html
 		font-size: 12px
 
-	body
+	.catalog, section
 		width: 100vw
 
 	h1

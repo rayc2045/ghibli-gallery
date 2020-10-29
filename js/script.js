@@ -149,6 +149,8 @@ const works = [
 class GhibliGallery {
 	constructor() {
 		this.bodyEl = document.body;
+		this.bodyWidth = this.bodyEl.getBoundingClientRect().width;
+		this.toTopButton = document.querySelector('.toTop');
 		this.events();
 	}
 
@@ -162,6 +164,21 @@ class GhibliGallery {
 				this.removeElement(sectionEl);
 				this.updateGallerySection(e.target.id);
 				this.moveToGallery();
+			}
+		};
+
+		this.toTopButton.onclick = () => this.moveToTop();
+
+		window.onresize = () => {
+			this.bodyWidth = this.bodyEl.getBoundingClientRect().width;
+			if (this.bodyWidth <= 900) this.hideTopButton();
+		};
+
+		window.onscroll = () => {
+			if (this.bodyWidth > 900) {
+				const titleVisible = document.querySelector('h1').getBoundingClientRect().bottom > 0;
+				if (titleVisible) return this.hideTopButton();
+				this.showTopButton();
 			}
 		};
 	}
@@ -211,7 +228,19 @@ class GhibliGallery {
 
 	moveToGallery() {
 		const GalleryTop = document.querySelector('section').getBoundingClientRect().top;
-		window.scrollTo(0, GalleryTop)
+		window.scrollTo(0, GalleryTop);
+	}
+
+	moveToTop() {
+		window.scrollTo(0, 0);
+	}
+
+	hideTopButton() {
+		this.toTopButton.classList.add('hide');
+	}
+
+	showTopButton() {
+		this.toTopButton.classList.remove('hide');
 	}
 }
 

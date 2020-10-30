@@ -1,4 +1,4 @@
-[![Photo](https://raw.githubusercontent.com/rayc2045/ghibli-gallery/main/ghibli-gallery.png)](https://dribbble.com/raychangdesign)
+[![Photo](https://cdn.dribbble.com/users/3800131/screenshots/14489502/media/e740658dea07f7e82afa9e88d4dd880a.png)](https://dribbble.com/raychangdesign)
 
 # Ghibli Gallery - スタジオジブリ作品の場面写真
 

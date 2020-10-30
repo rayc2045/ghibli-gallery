@@ -22,17 +22,19 @@ html, body
 	padding: 0
 
 html
-	+flexCenter
 	font-size: 0.83vw
 	scroll-behavior: smooth
 
 body
 	+flexCenter
 	position: relative
-	width: 83.28125vw
+	width: 100vw
 	font-family: 'Noto Serif JP', serif
 	color: $white
 	background-color: $black
+
+.container
+	width: 83.28125vw
 
 .toTop
 	position: fixed
@@ -85,7 +87,7 @@ img
 	html
 		font-size: 12px
 
-	body
+	.container
 		width: 100vw
 
 	h1

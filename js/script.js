@@ -149,6 +149,7 @@ const works = [
 class GhibliGallery {
 	constructor() {
 		this.bodyEl = document.body;
+		this.containerEl = document.querySelector('.container');
 		this.bodyWidth = this.bodyEl.getBoundingClientRect().width;
 		this.toTopButton = document.querySelector('.toTop');
 		this.events();
@@ -199,7 +200,7 @@ class GhibliGallery {
 			catalog.appendChild(button);
 		}
 
-		this.bodyEl.appendChild(catalog);
+		this.containerEl.appendChild(catalog);
 	}
 
 	updateGallerySection(id = 0) {
@@ -223,7 +224,7 @@ class GhibliGallery {
 			section.appendChild(img);
 		}
 
-		this.bodyEl.appendChild(section);
+		this.containerEl.appendChild(section);
 	}
 
 	moveToGallery() {

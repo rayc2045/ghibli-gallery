@@ -192,7 +192,7 @@ class GhibliGallery {
 		const catalog = document.createElement('div');
 		catalog.classList.add('catalog');
 		
-		for (let i = 0; i < works.length; i++) {
+		for (const i in works) {
 			const button = document.createElement('div');
 			button.classList.add('button');
 			button.id = i;

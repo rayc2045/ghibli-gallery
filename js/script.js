@@ -177,9 +177,9 @@ class GhibliGallery {
 
 		window.onscroll = () => {
 			if (this.bodyWidth > 900) {
-				const titleVisible = document.querySelector('h1').getBoundingClientRect().bottom > 0;
-				if (titleVisible) return this.hideTopButton();
-				this.showTopButton();
+				document.querySelector('h1').getBoundingClientRect().bottom > 0
+					? this.hideTopButton()
+					: this.showTopButton();
 			}
 		};
 	}
@@ -191,7 +191,7 @@ class GhibliGallery {
 	updateCatalog() {
 		const catalog = document.createElement('div');
 		catalog.classList.add('catalog');
-		
+
 		for (const i in works) {
 			const button = document.createElement('div');
 			button.classList.add('button');
@@ -205,7 +205,7 @@ class GhibliGallery {
 
 	updateGallerySection(id = 0) {
 		const section = document.createElement('section');
-		
+
 		// Title
 		const title = document.createElement('H1');
 		title.textContent = `${works[id].name} (${works[id].publicTime})`;

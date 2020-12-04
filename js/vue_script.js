@@ -155,10 +155,9 @@ const app = {
     const currentIdx = ref(0);
 
     const getImgUrl = (idx) => {
-      let imgUrl = api + works.data[currentIdx.value].nickname;
       return idx < 9
-        ? (imgUrl += `00${idx + 1}.jpg`)
-        : (imgUrl += `0${idx + 1}.jpg`);
+        ? `${api}${works.data[currentIdx.value].nickname}00${idx + 1}.jpg`
+        : `${api}${works.data[currentIdx.value].nickname}0${idx + 1}.jpg`;
     };
 
     const changeAlbum = (idx) => {
@@ -175,7 +174,7 @@ const app = {
         const bodyWidth = document.body.getBoundingClientRect().width;
         if (bodyWidth <= 900) isTopButtonHide.value = true;
       };
-      
+
       window.onscroll = () => {
         const bodyWidth = document.body.getBoundingClientRect().width;
         const isTitleVisible = document.querySelector('h1').getBoundingClientRect().bottom > 0;

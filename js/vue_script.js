@@ -2,7 +2,7 @@ const { ref, reactive, onMounted } = Vue;
 
 const app = {
   setup() {
-    const api = 'http://www.ghibli.jp/gallery/';
+    const api = 'https://www.ghibli.jp/gallery/';
     const works = reactive({
       data: [
         // {

@@ -95,42 +95,42 @@ const app = {
           publicTime: 1995,
           numsOfImage: 50,
         },
-        // {
-        // 	name: '平成狸合戦ぽんぽこ',
-        // 	nickname: 'pompoko',
-        // 	publicTime: 1994,
-        // 	numsOfImage: 50
-        // },
-        // {
-        // 	name: '海がきこえる',
-        // 	nickname: 'koeru',
-        // 	publicTime: 1993,
-        // 	numsOfImage: 50
-        // },
-        // {
-        // 	name: '紅の豚',
-        // 	nickname: 'buta',
-        // 	publicTime: 1992,
-        // 	numsOfImage: 50
-        // },
+        {
+        	name: '平成狸合戦ぽんぽこ',
+        	nickname: 'tanuki',
+        	publicTime: 1994,
+        	numsOfImage: 50
+        },
+        {
+        	name: '海がきこえる',
+        	nickname: 'umi',
+        	publicTime: 1993,
+        	numsOfImage: 50
+        },
+        {
+        	name: '紅の豚',
+        	nickname: 'porco',
+        	publicTime: 1992,
+        	numsOfImage: 50
+        },
         // {
         // 	name: 'おもひでぽろぽろ',
         // 	nickname: 'poro',
         // 	publicTime: 1991,
         // 	numsOfImage: 50
         // },
-        // {
-        // 	name: '魔女の宅急便',
-        // 	nickname: 'majyo',
-        // 	publicTime: 1989,
-        // 	numsOfImage: 50
-        // },
-        // {
-        // 	name: 'となりのトトロ',
-        // 	nickname: 'totoro',
-        // 	publicTime: 1988,
-        // 	numsOfImage: 50
-        // },
+        {
+        	name: '魔女の宅急便',
+        	nickname: 'majo',
+        	publicTime: 1989,
+        	numsOfImage: 50
+        },
+        {
+        	name: 'となりのトトロ',
+        	nickname: 'totoro',
+        	publicTime: 1988,
+        	numsOfImage: 50
+        },
         // {
         // 	name: '火垂るの墓',
         // 	nickname: 'hotarunohaka',

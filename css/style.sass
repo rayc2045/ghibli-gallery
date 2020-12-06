@@ -39,15 +39,14 @@ body
 .toTop
 	position: fixed
 	right: 3vw
-	bottom: 1vw
-	width: 4rem
+	bottom: 1.5vw
+	width: 3rem
 	text-align: center
-	font-size: 3rem
 	color: $white
 	cursor: pointer
-	transition: 1s
+	transition: bottom 1s
 	&.hide
-		bottom: -999px
+		bottom: -100vh
 
 .catalog
 	margin-top: 7rem
@@ -98,3 +97,7 @@ img
 
 	img
 		width: 99%
+
+	.toTop
+		right: 2rem
+		bottom: 1rem

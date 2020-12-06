@@ -36,18 +36,6 @@ body
 .container
 	width: 83.28125vw
 
-.toTop
-	position: fixed
-	right: 3vw
-	bottom: 1.5vw
-	width: 3rem
-	text-align: center
-	color: $white
-	cursor: pointer
-	transition: bottom 1s
-	&.hide
-		bottom: -100vh
-
 .catalog
 	margin-top: 7rem
 	padding: 0 15%
@@ -67,7 +55,6 @@ body
 	
 section
 	padding: 0 0.7rem
-	height: 100vh // make window.scrollTo() enable
 	text-align: center
 	&:last-child
 		margin-bottom: 0
@@ -81,6 +68,18 @@ h1
 img
 	margin: 0.7%
 	width: calc(50% - 0.7% * 2)
+
+.toTop
+	position: fixed
+	right: 3vw
+	bottom: 1.5vw
+	width: 3rem
+	text-align: center
+	color: $white
+	cursor: pointer
+	transition: bottom 1s
+	&.hide
+		bottom: -100vh
 
 @media screen and (max-width: 1080px)
 	html

@@ -170,19 +170,12 @@ const app = {
     const moveTo = (posY) => window.scrollTo(0, posY);
 
     onMounted(() => {
-      window.onresize = () => {
-        const bodyWidth = document.body.getBoundingClientRect().width;
-        if (bodyWidth <= 900) isTopButtonHide.value = true;
-      };
-
       window.onscroll = () => {
-        const bodyWidth = document.body.getBoundingClientRect().width;
         const isTitleVisible = document.querySelector('h1').getBoundingClientRect().bottom > 0;
-        if (bodyWidth > 900) {
-          isTitleVisible
-            ? (isTopButtonHide.value = true)
-            : (isTopButtonHide.value = false);
-        }
+
+        isTitleVisible
+          ? (isTopButtonHide.value = true)
+          : (isTopButtonHide.value = false);
       };
     });
 

@@ -10,4 +10,4 @@
 - 初次載入時加入 Loading 畫面，除了利用龍貓 Logo 加深使用者對吉卜力工作室的品牌印象，同時遮蔽掉 Vue 掛載元素前、一瞬間出現的模板語法
 - 將原本吉卜力工作室官網散佈式的劇照呈現方式改為兩欄並排（平板與手機以ㄧ欄呈現），排版更為清晰友好
 - 使用 [Noto Serif JP](https://fonts.google.com/specimen/Noto+Serif+JP) 字體，統一日、英、數字基線
-- [下載吉卜力工作室作品圖](https://rayc2045.github.io/ghibli-gallery/)
+- 參觀 [吉卜力相簿](https://rayc2045.github.io/ghibli-gallery/)

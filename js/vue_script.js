@@ -154,6 +154,7 @@ const app = {
     const isTopButtonHide = ref(true);
     const isLoading = ref(true);
     const currentIdx = ref(0);
+    const originalHref = window.location.href;
 
     const getImgUrl = (idx) => {
       return idx < 9
@@ -165,7 +166,7 @@ const app = {
       currentIdx.value = idx;
       // console.log(works.data[currentIdx.value]);
       setTimeout(() => {
-        window.history.replaceState({}, '', window.location.origin);
+        window.history.replaceState({}, '', originalHref);
       }, 0);
     };
 

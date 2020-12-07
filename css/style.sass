@@ -25,11 +25,30 @@ html
 	scroll-behavior: smooth
 
 body
-	+flexCenter
-	position: relative
 	font-family: 'Noto Serif JP', serif
 	color: $white
 	background-color: $black
+
+#app
+	+flexCenter
+	position: relative
+	width: 100vw
+
+.loading
+	position: fixed
+	left: 0
+	top: 0
+	width: 100vw
+	height: 100vh
+	background-color: $black
+	img
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
+		width: 45rem
+		opacity: 0.9
+		pointer-events: none
 
 .container
 	width: 83.28125vw
@@ -65,7 +84,7 @@ img
 	margin: 0.7%
 	width: calc(50% - 0.7% * 2)
 
-.toTop
+.to-top-button
 	position: fixed
 	right: 3vw
 	bottom: 1.5vw
@@ -79,6 +98,9 @@ img
 	html
 		font-size: 12px
 
+	.loading img
+		width: 60%
+
 	.container
 		width: 100vw
 
@@ -91,6 +113,6 @@ img
 	img
 		width: 98.6%
 
-	.toTop
+	.to-top-button
 		right: 2rem
 		bottom: 1rem

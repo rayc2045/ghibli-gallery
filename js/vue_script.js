@@ -152,6 +152,7 @@ const app = {
       ],
     });
     const isTopButtonHide = ref(true);
+    const isLoading = ref(true);
     const currentIdx = ref(0);
 
     const getImgUrl = (idx) => {
@@ -170,6 +171,11 @@ const app = {
     const moveTo = (posY) => window.scrollTo(0, posY);
 
     onMounted(() => {
+      setTimeout(() => {
+        isLoading.value = false;
+        document.body.removeAttribute('style');
+      }, 1800);
+
       window.onscroll = () => {
         const isTitleVisible = document.querySelector('h1').getBoundingClientRect().bottom > 0;
 
@@ -182,6 +188,7 @@ const app = {
     return {
       works,
       isTopButtonHide,
+      isLoading,
       currentIdx,
       getImgUrl,
       changeAlbum,

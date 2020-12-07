@@ -25,17 +25,17 @@
       </div>
       <div class="container">
         <div class="catalog">
-          <div
-            class="button"
+          <a
+            href="#title"
             v-for="(item, idx) in works.data"
             :key="item.name"
             @click="changeAlbum(idx)"
           >
             {{item.name}}
-          </div>
+          </a>
         </div>
         <section>
-          <h1>
+          <h1 id="title">
             {{works.data[currentIdx].name}}
             ({{works.data[currentIdx].publicTime}})
           </h1>

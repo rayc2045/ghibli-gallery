@@ -164,8 +164,9 @@ const app = {
     const changeAlbum = (idx) => {
       currentIdx.value = idx;
       // console.log(works.data[currentIdx.value]);
-      const galleryTop = document.querySelector('section').getBoundingClientRect().top;
-      moveTo(galleryTop);
+      setTimeout(() => {
+        window.history.replaceState({}, '', window.location.origin);
+      }, 0);
     };
 
     const moveTo = (posY) => window.scrollTo(0, posY);
@@ -174,7 +175,7 @@ const app = {
       setTimeout(() => {
         isLoading.value = false;
         document.body.removeAttribute('style');
-      }, 1800);
+      }, 2200);
 
       window.onscroll = () => {
         const isTitleVisible = document.querySelector('h1').getBoundingClientRect().bottom > 0;

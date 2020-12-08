@@ -96,22 +96,22 @@ const app = {
           numsOfImage: 50,
         },
         {
-        	name: '平成狸合戦ぽんぽこ',
-        	nickname: 'tanuki',
-        	publicTime: 1994,
-        	numsOfImage: 50
+          name: '平成狸合戦ぽんぽこ',
+          nickname: 'tanuki',
+          publicTime: 1994,
+          numsOfImage: 50,
         },
         {
-        	name: '海がきこえる',
-        	nickname: 'umi',
-        	publicTime: 1993,
-        	numsOfImage: 50
+          name: '海がきこえる',
+          nickname: 'umi',
+          publicTime: 1993,
+          numsOfImage: 50,
         },
         {
-        	name: '紅の豚',
-        	nickname: 'porco',
-        	publicTime: 1992,
-        	numsOfImage: 50
+          name: '紅の豚',
+          nickname: 'porco',
+          publicTime: 1992,
+          numsOfImage: 50,
         },
         // {
         // 	name: 'おもひでぽろぽろ',
@@ -120,16 +120,16 @@ const app = {
         // 	numsOfImage: 50
         // },
         {
-        	name: '魔女の宅急便',
-        	nickname: 'majo',
-        	publicTime: 1989,
-        	numsOfImage: 50
+          name: '魔女の宅急便',
+          nickname: 'majo',
+          publicTime: 1989,
+          numsOfImage: 50,
         },
         {
-        	name: 'となりのトトロ',
-        	nickname: 'totoro',
-        	publicTime: 1988,
-        	numsOfImage: 50
+          name: 'となりのトトロ',
+          nickname: 'totoro',
+          publicTime: 1988,
+          numsOfImage: 50,
         },
         // {
         // 	name: '火垂るの墓',
@@ -151,15 +151,14 @@ const app = {
         // }
       ],
     });
-    const isTopButtonHide = ref(true);
     const isLoading = ref(true);
     const currentIdx = ref(0);
     const originalHref = window.location.href;
+    const isTopButtonHide = ref(true);
 
-    const getImgUrl = (idx) => {
-      return idx < 9
-        ? `${api}${works.data[currentIdx.value].nickname}00${idx + 1}.jpg`
-        : `${api}${works.data[currentIdx.value].nickname}0${idx + 1}.jpg`;
+    const endLoading = () => {
+      isLoading.value = false;
+      document.body.removeAttribute('style');
     };
 
     const changeAlbum = (idx) => {
@@ -170,13 +169,16 @@ const app = {
       }, 0);
     };
 
+    const getImgUrl = (idx) => {
+      return idx < 9
+        ? `${api}${works.data[currentIdx.value].nickname}00${idx + 1}.jpg`
+        : `${api}${works.data[currentIdx.value].nickname}0${idx + 1}.jpg`;
+    };
+
     const moveTo = (posY) => window.scrollTo(0, posY);
 
     onMounted(() => {
-      setTimeout(() => {
-        isLoading.value = false;
-        document.body.removeAttribute('style');
-      }, 2200);
+      setTimeout(() => endLoading(), 2200);
 
       window.onscroll = () => {
         const isTitleVisible = document.querySelector('h1').getBoundingClientRect().bottom > 0;
@@ -189,11 +191,11 @@ const app = {
 
     return {
       works,
-      isTopButtonHide,
       isLoading,
       currentIdx,
-      getImgUrl,
+      isTopButtonHide,
       changeAlbum,
+      getImgUrl,
       moveTo,
     };
   },

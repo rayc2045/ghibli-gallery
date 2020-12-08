@@ -30,6 +30,9 @@
             v-for="(item, idx) in works.data"
             :key="item.name"
             @click="changeAlbum(idx)"
+            @contextmenu.prevent
+            @selectstart.prevent
+            @dragstart.prevent
           >
             {{item.name}}
           </a>

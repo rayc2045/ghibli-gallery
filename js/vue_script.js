@@ -178,11 +178,13 @@ const app = {
     const moveTo = (posY) => window.scrollTo(0, posY);
 
     onMounted(() => {
-      setTimeout(() => endLoading(), 2200);
+      const loadingCover = new Image();
+      loadingCover.src = '../img/logo_transparent.png';
+      loadingCover.onload = () => setTimeout(() => endLoading(), 2000);
 
       window.onscroll = () => {
-        const isTitleVisible = document.querySelector('h1').getBoundingClientRect().bottom > 0;
-
+        const isTitleVisible =
+          document.querySelector('h1').getBoundingClientRect().bottom > 0;
         isTitleVisible
           ? (isTopButtonHide.value = true)
           : (isTopButtonHide.value = false);

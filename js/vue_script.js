@@ -156,9 +156,12 @@ const app = {
     const originalHref = window.location.href;
     const isTopButtonHide = ref(true);
 
-    const endLoading = () => {
-      isLoading.value = false;
-      document.body.removeAttribute('style');
+    const endLoading = (sec) => {
+      // console.log('loaded');
+      setTimeout(() => {
+        isLoading.value = false;
+        document.body.removeAttribute('style');
+      }, sec * 1000);
     };
 
     const changeAlbum = (idx) => {
@@ -178,10 +181,6 @@ const app = {
     const moveTo = (posY) => window.scrollTo(0, posY);
 
     onMounted(() => {
-      const loadingCover = new Image();
-      loadingCover.src = '../img/logo_transparent.png';
-      loadingCover.onload = () => setTimeout(() => endLoading(), 2000);
-
       window.onscroll = () => {
         const isTitleVisible =
           document.querySelector('h1').getBoundingClientRect().bottom > 0;
@@ -196,6 +195,7 @@ const app = {
       isLoading,
       currentIdx,
       isTopButtonHide,
+      endLoading,
       changeAlbum,
       getImgUrl,
       moveTo,

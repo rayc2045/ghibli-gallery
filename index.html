@@ -21,7 +21,7 @@
         @selectstart.prevent
         @dragstart.prevent
       >
-        <img src="./img/logo_transparent.png">
+        <img src="./img/logo_transparent.png" @load="endLoading(2)">
       </div>
       <div class="container">
         <div class="catalog">

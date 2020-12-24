@@ -5,156 +5,189 @@ const app = {
     const api = 'https://www.ghibli.jp/gallery/';
     const works = reactive({
       data: [
-        // {
-        // 	name: 'レッドタートル ある島の物語',
-        // 	nickname: 'red-turtle',
-        // 	publicTime: 2016,
-        // 	numsOfImage: 50
-        // },
         {
-          name: '思い出のマーニー',
-          nickname: 'marnie',
+          title: 'レッドタートル ある島の物語',
+          titleEng: 'La Tortue Rouge',
+          albumFolder: 'redturtle',
+          publicTime: 2016,
+          numsOfImage: 50,
+        },
+        {
+          title: '思い出のマーニー',
+          titleEng: 'When Marnie Was There',
+          albumFolder: 'marnie',
           publicTime: 2014,
           numsOfImage: 50,
         },
         {
-          name: 'かぐや姫の物語',
-          nickname: 'kaguyahime',
+          title: 'かぐや姫の物語',
+          titleEng: 'The Tale of The Princess Kaguya',
+          albumFolder: 'kaguyahime',
           publicTime: 2013,
           numsOfImage: 50,
         },
         {
-          name: '風立ちぬ',
-          nickname: 'kazetachinu',
+          title: '風立ちぬ',
+          titleEng: 'The Wind Rises',
+          albumFolder: 'kazetachinu',
           publicTime: 2013,
           numsOfImage: 50,
         },
         {
-          name: 'コクリコ坂から',
-          nickname: 'kokurikozaka',
+          title: 'コクリコ坂から',
+          titleEng: 'From Up on Poppy Hill',
+          albumFolder: 'kokurikozaka',
           publicTime: 2011,
           numsOfImage: 50,
         },
         {
-          name: '借りぐらしのアリエッティ',
-          nickname: 'karigurashi',
+          title: '借りぐらしのアリエッティ',
+          titleEng: 'Arrietty',
+          albumFolder: 'karigurashi',
           publicTime: 2010,
           numsOfImage: 50,
         },
         {
-          name: '崖の上のポニョ',
-          nickname: 'ponyo',
+          title: '崖の上のポニョ',
+          titleEng: 'Ponyo on the Cliff by the Sea',
+          albumFolder: 'ponyo',
           publicTime: 2008,
           numsOfImage: 50,
         },
         {
-          name: 'ゲド戦記',
-          nickname: 'ged',
+          title: 'ゲド戦記',
+          titleEng: 'Tales from Earthsea',
+          albumFolder: 'ged',
           publicTime: 2006,
           numsOfImage: 50,
         },
         {
-          name: 'ハウルの動く城',
-          nickname: 'howl',
+          title: 'ハウルの動く城',
+          titleEng: "Howl's Moving Castle",
+          albumFolder: 'howl',
           publicTime: 2004,
           numsOfImage: 50,
         },
         {
-          name: '猫の恩返し',
-          nickname: 'baron',
+          title: '猫の恩返し',
+          titleEng: 'The Cat Returns',
+          albumFolder: 'baron',
           publicTime: 2002,
           numsOfImage: 50,
         },
         {
-          name: 'ギブリーズ episode2',
-          nickname: 'ghiblies',
+          title: 'ギブリーズ episode2',
+          titleEng: 'The Ghiblies episode 2',
+          albumFolder: 'ghiblies',
           publicTime: 2002,
           numsOfImage: 50,
         },
         {
-          name: '千と千尋の神隠し',
-          nickname: 'chihiro',
+          title: '千と千尋の神隠し',
+          titleEng: 'Spirited Away',
+          albumFolder: 'chihiro',
           publicTime: 2001,
           numsOfImage: 50,
         },
         {
-          name: 'ホーホケキョ となりの山田くん',
-          nickname: 'yamada',
+          title: 'ホーホケキョ となりの山田くん',
+          titleEng: 'My Neighbors the Yamadas',
+          albumFolder: 'yamada',
           publicTime: 1999,
           numsOfImage: 50,
         },
         {
-          name: 'もののけ姫',
-          nickname: 'mononoke',
+          title: 'もののけ姫',
+          titleEng: 'Princess Mononoke',
+          albumFolder: 'mononoke',
           publicTime: 1997,
           numsOfImage: 50,
         },
         {
-          name: '耳をすませば',
-          nickname: 'mimi',
+          title: 'On Your Mark',
+          titleEng: 'On Your Mark',
+          albumFolder: 'onyourmark',
+          publicTime: 1995,
+          numsOfImage: 28,
+        },
+        {
+          title: '耳をすませば',
+          titleEng: 'Whisper of the Heart',
+          albumFolder: 'mimi',
           publicTime: 1995,
           numsOfImage: 50,
         },
         {
-          name: '平成狸合戦ぽんぽこ',
-          nickname: 'tanuki',
+          title: '平成狸合戦ぽんぽこ',
+          titleEng: 'Pom Poko',
+          albumFolder: 'tanuki',
           publicTime: 1994,
           numsOfImage: 50,
         },
         {
-          name: '海がきこえる',
-          nickname: 'umi',
+          title: '海がきこえる',
+          titleEng: 'The Ocean Waves',
+          albumFolder: 'umi',
           publicTime: 1993,
           numsOfImage: 50,
         },
         {
-          name: '紅の豚',
-          nickname: 'porco',
+          title: '紅の豚',
+          titleEng: 'Porco Rosso',
+          albumFolder: 'porco',
           publicTime: 1992,
           numsOfImage: 50,
         },
-        // {
-        // 	name: 'おもひでぽろぽろ',
-        // 	nickname: 'poro',
-        // 	publicTime: 1991,
-        // 	numsOfImage: 50
-        // },
         {
-          name: '魔女の宅急便',
-          nickname: 'majo',
+          title: 'おもひでぽろぽろ',
+          titleEng: 'Only Yesterday',
+          albumFolder: 'omoide',
+          publicTime: 1991,
+          numsOfImage: 50,
+        },
+        {
+          title: '魔女の宅急便',
+          titleEng: "Kiki's Delivery Service",
+          albumFolder: 'majo',
           publicTime: 1989,
           numsOfImage: 50,
         },
         {
-          name: 'となりのトトロ',
-          nickname: 'totoro',
+          title: 'となりのトトロ',
+          titleEng: 'My Neighbor Totoro',
+          albumFolder: 'totoro',
           publicTime: 1988,
           numsOfImage: 50,
         },
         // {
-        // 	name: '火垂るの墓',
-        // 	nickname: 'hotarunohaka',
+        // 	title: '火垂るの墓',
+        // titleEng: '',
+        // 	albumFolder: 'hotarunohaka',
         // 	publicTime: 1988,
         // 	numsOfImage: 50
         // },
-        // {
-        // 	name: '天空の城ラピュタ',
-        // 	nickname: 'laputa',
-        // 	publicTime: 1986,
-        // 	numsOfImage: 50
-        // },
-        // {
-        // 	name: '風の谷のナウシカ',
-        // 	nickname: 'nausicaa',
-        // 	publicTime: 1984,
-        // 	numsOfImage: 50
-        // }
+        {
+          title: '天空の城ラピュタ',
+          titleEng: 'Castle in the Sky',
+          albumFolder: 'laputa',
+          publicTime: 1986,
+          numsOfImage: 50,
+        },
+        {
+          title: '風の谷のナウシカ',
+          titleEng: 'Nausicaä of the Valley of the Wind',
+          albumFolder: 'nausicaa',
+          publicTime: 1984,
+          numsOfImage: 50,
+        },
       ],
     });
     const isLoading = ref(true);
     const currentIdx = ref(0);
     const originalHref = window.location.href;
     const isTopButtonHide = ref(true);
+
+    const getRandomNum = (min, max) => Math.floor(Math.random() * max) + min;
 
     const endLoading = (sec) => {
       // console.log('loaded');
@@ -174,16 +207,18 @@ const app = {
 
     const getImgUrl = (idx) => {
       return idx < 9
-        ? `${api}${works.data[currentIdx.value].nickname}00${idx + 1}.jpg`
-        : `${api}${works.data[currentIdx.value].nickname}0${idx + 1}.jpg`;
+        ? `${api}${works.data[currentIdx.value].albumFolder}00${idx + 1}.jpg`
+        : `${api}${works.data[currentIdx.value].albumFolder}0${idx + 1}.jpg`;
     };
 
     const moveTo = (posY) => window.scrollTo(0, posY);
 
     onMounted(() => {
+      currentIdx.value = getRandomNum(0, works.data.length);
+
       window.onscroll = () => {
-        const isTitleVisible =
-          document.querySelector('h1').getBoundingClientRect().bottom > 0;
+        const isTitleVisible = document.querySelector('h1').getBoundingClientRect().bottom > 0;
+
         isTitleVisible
           ? (isTopButtonHide.value = true)
           : (isTopButtonHide.value = false);

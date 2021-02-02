@@ -7,7 +7,7 @@
 - 使用預處理器 Sass 撰寫 CSS；使用 Vue 3.0 開發網站架構，感受最新潮的 [Composition API](https://composition-api.vuejs.org/#logic-reuse-code-organization)
 - 依照動畫出版年份和作品劇照的網址命名邏輯，整合出新的作品資料
 - 透過點擊作品目錄切換動畫劇照，達成不換頁觀看
-- 使用 [v-cloak](https://v3.vuejs.org/api/directives.html#v-cloak) 屬性遮蔽掉 Vue 掛載元素前、一瞬間出現的模板語法
+- 使用 [v-cloak](https://v3.vuejs.org/api/directives.html#v-cloak) 屬性隱藏 Vue 掛載元素前、一瞬間出現的模板語法
 - 初次載入時加入 Loading 畫面，加深使用者對吉卜力工作室的品牌印象
 - 將原本吉卜力工作室官網散佈式的劇照呈現方式改為兩欄並排（平板與手機則ㄧ欄），再配合深色主題呈現，排版更為精緻且更能長久觀看
 - 使用 [Noto Serif JP](https://fonts.google.com/specimen/Noto+Serif+JP) 字體，統一日、英、數字基線

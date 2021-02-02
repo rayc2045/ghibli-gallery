@@ -12,63 +12,62 @@
     <link rel="stylesheet" href="./css/style.min.css">
   </head>
   <body style="overflow: hidden;">
-    <div id="app">
-      <div
-        class="loading"
-        v-if="isLoading"
-        @touchstart.prevent
-        @contextmenu.prevent
-        @selectstart.prevent
-        @dragstart.prevent
-      >
-        <img src="./img/logo_transparent.png" @load="endLoading(2)">
-      </div>
-      <div class="container">
-        <div class="catalog">
-          <a
-            href="#title"
-            v-for="(item, idx) in works.data"
-            :key="item.title"
-            @click="changeAlbum(idx)"
-            @contextmenu.prevent
-            @selectstart.prevent
-            @dragstart.prevent
-          >
-            {{item.title}}
-          </a>
-        </div>
-        <section>
-          <h1 id="title">
-            {{works.data[currentIdx].title}}
-            ({{works.data[currentIdx].publicTime}})
-          </h1>
-          <img
-            v-for="(num, idx) in works.data[currentIdx].numsOfImage"
-            :src="getImgUrl(idx)"
-          />
-        </section>
-      </div>
-      <div
-        :class="['to-top-button', {hide: isTopButtonHide}]"
-        v-show="!isLoading"
-        @click="moveTo(0)"
-        @selectstart.prevent
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 512 512"
-        >
-          <path
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="48"
-            d="M112 328l144-144 144 144"
-          />
-        </svg>
-      </div>
+    <div
+      class="loading"
+      v-if="isLoading"
+      @touchstart.prevent
+      @contextmenu.prevent
+      @selectstart.prevent
+      @dragstart.prevent
+    >
+      <img src="./img/logo_transparent.png" @load="endLoading(2)">
     </div>
+    <div class="container">
+      <div class="catalog">
+        <a
+          href="#title"
+          v-for="(item, idx) in works.data"
+          :key="item.title"
+          @click="changeAlbum(idx)"
+          @contextmenu.prevent
+          @selectstart.prevent
+          @dragstart.prevent
+        >
+          {{item.title}}
+        </a>
+      </div>
+      <section>
+        <h1 id="title">
+          {{works.data[currentIdx].title}}
+          ({{works.data[currentIdx].publicTime}})
+        </h1>
+        <img
+          v-for="(num, idx) in works.data[currentIdx].numsOfImage"
+          :src="getImgUrl(idx)"
+        />
+      </section>
+    </div>
+    <div
+      :class="['to-top-button', {hide: isTopButtonHide}]"
+      v-show="!isLoading"
+      @click="moveTo(0)"
+      @selectstart.prevent
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 512 512"
+      >
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="48"
+          d="M112 328l144-144 144 144"
+        />
+      </svg>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/vue@3.0.4"></script>
     <script src="./js/vue_script.min.js"></script>
   </body>

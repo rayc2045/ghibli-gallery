@@ -1,12 +1,6 @@
 $white: #eee
 $black: #1E1F27
 
-@mixin flexCenter
-	display: flex
-	flex-direction: column
-	justify-content: center
-	align-items: center
-
 ::selection
 	background-color: rgba($white, 0.5)
 
@@ -21,18 +15,15 @@ html, body
 	padding: 0
 
 html
+	font-family: 'Noto Serif JP', serif
 	font-size: 0.83vw
 	scroll-behavior: smooth
 
 body
-	font-family: 'Noto Serif JP', serif
+	display: flex
+	justify-content: center
 	color: $white
 	background-color: $black
-
-#app
-	+flexCenter
-	position: relative
-	width: 100vw
 
 .loading
 	position: fixed

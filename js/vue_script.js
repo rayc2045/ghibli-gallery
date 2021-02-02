@@ -238,4 +238,4 @@ const app = {
   },
 };
 
-Vue.createApp(app).mount('#app');
+Vue.createApp(app).mount(document.body);

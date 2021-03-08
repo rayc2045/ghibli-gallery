@@ -26,7 +26,7 @@
       <div class="catalog">
         <a
           href="#title"
-          v-for="(item, idx) in works.data"
+          v-for="(item, idx) in works"
           :key="item.title"
           @click="changeAlbum(idx)"
           @contextmenu.prevent
@@ -38,11 +38,11 @@
       </div>
       <section>
         <h1 id="title">
-          {{works.data[currentIdx].title}}
-          ({{works.data[currentIdx].publicTime}})
+          {{works[currentIdx].title}}
+          ({{works[currentIdx].publicTime}})
         </h1>
         <img
-          v-for="(num, idx) in works.data[currentIdx].numsOfImage"
+          v-for="(num, idx) in works[currentIdx].numsOfImage"
           :src="getImgUrl(idx)"
         />
       </section>

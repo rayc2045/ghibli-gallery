@@ -1,4 +1,4 @@
-const { ref, reactive, onMounted } = Vue;
+import { ref, reactive, onMounted, createApp } from 'https://cdnjs.cloudflare.com/ajax/libs/vue/3.1.2/vue.esm-browser.min.js';
 
 const app = {
   setup() {
@@ -238,4 +238,4 @@ const app = {
   },
 };
 
-Vue.createApp(app).mount(document.body);
+createApp(app).mount(document.body);

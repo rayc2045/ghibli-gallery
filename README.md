@@ -15,7 +15,7 @@
 - 使用 [Noto Serif JP](https://fonts.google.com/specimen/Noto+Serif+JP) 字體，統一日、英、數字基線
 
 ### 開發紀錄
-- 使用 Vue 3.0 開發網站架構，感受最新潮的 [Composition API](https://composition-api.vuejs.org/#logic-reuse-code-organization)
+- 使用 ES Module 引入 Vue 3 開發網站架構，感受最新潮的 [Composition API](https://composition-api.vuejs.org/#logic-reuse-code-organization)
 - 使用預處理器 Sass 撰寫 CSS
 - RWD 響應式設計上使用 `rem` 單位配合 Media Query 呈現，達成任意縮放螢幕，元素單位比例也能自適應
 - 使用 [`v-cloak`](https://v3.vuejs.org/api/directives.html#v-cloak) 屬性隱藏 Vue 掛載元素前、一瞬間出現的模板語法

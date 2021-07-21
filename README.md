@@ -1,6 +1,6 @@
 # Ghibli Gallery - スタジオジブリ作品の場面写真
 
-[![Photo](https://cdn.dribbble.com/users/3800131/screenshots/15181266/media/911d9783455dc45f4014b30eb15725e3.png)](https://dribbble.com/raychangdesign)
+![Photo](https://cdn.dribbble.com/users/3800131/screenshots/15181266/media/911d9783455dc45f4014b30eb15725e3.png)
 
 [> Ghibli Gallery](https://rayc2045.github.io/ghibli-gallery/)
 

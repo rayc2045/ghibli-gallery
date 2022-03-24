@@ -1,4 +1,4 @@
-# Ghibli Gallery - スタジオジブリ作品の場面写真
+# Ghibli Gallery｜重新設計吉卜力工作室作品相簿
 
 ![Photo](https://cdn.dribbble.com/users/3800131/screenshots/15181266/media/911d9783455dc45f4014b30eb15725e3.png)
 

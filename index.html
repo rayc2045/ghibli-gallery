@@ -9,7 +9,7 @@
     <meta name="author" content="Ray Chang">
     <link rel="icon" href="https://raw.githubusercontent.com/rayc2045/ghibli-gallery/main/img/favicon.ico">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&display=swap">
-    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="stylesheet" href="./css/style.css">
     <style>
       [v-cloak] {
         display: none;
@@ -22,8 +22,7 @@
     @mount="init"
   >
     <div
-      class="loading"
-      v-if="isLoading"
+      :class="['loading', { animate: !isLoading }]"
       @touchstart.prevent
       @contextmenu.prevent
       @selectstart.prevent

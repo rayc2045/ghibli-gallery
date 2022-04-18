@@ -27,9 +27,6 @@ body
 	color: $white
 	background-color: $black
 
-[v-cloak]
-	display: none
-
 .loading
 	position: fixed
 	left: 0
@@ -37,6 +34,8 @@ body
 	width: 100vw
 	height: 100vh
 	background-color: $blue
+	opacity: 1
+	transition: opacity 1s
 	overscroll-behavior: contain
 	img
 		position: absolute
@@ -45,6 +44,9 @@ body
 		transform: translate(-50%, -50%)
 		width: 80rem
 		// filter: invert(90%)
+		pointer-events: none
+	&.animate
+		opacity: 0
 		pointer-events: none
 
 .container

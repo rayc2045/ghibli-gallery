@@ -10,8 +10,17 @@
     <link rel="icon" href="https://raw.githubusercontent.com/rayc2045/ghibli-gallery/main/img/favicon.ico">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&display=swap">
     <link rel="stylesheet" href="./css/style.min.css">
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
   </head>
-  <body v-cloak style="overflow: hidden;">
+  <body
+    v-cloak
+    :style="bodyStyle"
+    @mount="init"
+  >
     <div
       class="loading"
       v-if="isLoading"
@@ -20,7 +29,7 @@
       @selectstart.prevent
       @dragstart.prevent
     >
-      <img src="./img/totoro_logo.png" @load="endLoading(2)">
+      <img src="./img/totoro_logo.png">
     </div>
     <div class="container">
       <div class="catalog">
@@ -33,13 +42,13 @@
           @selectstart.prevent
           @dragstart.prevent
         >
-          {{item.title}}
+          {{ item.title }}
         </a>
       </div>
       <section>
         <h1 id="title">
-          {{works[currentIdx].title}}
-          ({{works[currentIdx].publicTime}})
+          {{ works[currentIdx].title }}
+          ({{ works[currentIdx].publicTime }})
         </h1>
         <img
           v-for="(num, idx) in works[currentIdx].numsOfImage"
@@ -48,9 +57,9 @@
       </section>
     </div>
     <div
-      :class="['to-top-button', {hide: isTopButtonHide}]"
+      :class="['to-top-button', { hide: isTopButtonHide }]"
       v-show="!isLoading"
-      @click="moveTo(0)"
+      @click="moveToTop"
       @selectstart.prevent
     >
       <svg
@@ -68,7 +77,6 @@
       </svg>
     </div>
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@3.0.4"></script> -->
-    <script type="module" src="./js/vue_script.min.js"></script>
+    <script type="module" src="./js/petite_script.js"></script>
   </body>
 </html>

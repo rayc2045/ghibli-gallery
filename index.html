@@ -27,6 +27,7 @@
       @contextmenu.prevent
       @selectstart.prevent
       @dragstart.prevent
+      @animationend="$el.remove()"
     >
       <img src="./img/totoro_logo.png">
     </div>

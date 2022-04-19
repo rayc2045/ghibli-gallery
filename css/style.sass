@@ -8,6 +8,12 @@ $black: #1E1F27
 ::-webkit-scrollbar
 	width: 0
 
+@keyframes fadeOut
+	from
+		opacity: 1
+	to
+		opacity: 0
+
 *
 	box-sizing: border-box
 
@@ -34,8 +40,6 @@ body
 	width: 100vw
 	height: 100vh
 	background-color: $blue
-	opacity: 1
-	transition: opacity 1s
 	overscroll-behavior: contain
 	img
 		position: absolute
@@ -46,7 +50,7 @@ body
 		// filter: invert(90%)
 		pointer-events: none
 	&.animate
-		opacity: 0
+		animation: fadeOut 1s forwards
 		pointer-events: none
 
 .container

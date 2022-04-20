@@ -46,7 +46,12 @@
         </a>
       </div>
       <section>
-        <h1 id="title">
+        <h1
+          id="title"
+          @contextmenu.prevent
+          @selectstart.prevent
+          @dragstart.prevent
+        >
           {{ works[currentIdx].title }}
           ({{ works[currentIdx].publicTime }})
         </h1>

@@ -1,175 +1,225 @@
 export default [
   {
-    title: 'レッドタートル ある島の物語',
-    titleEng: 'La Tortue Rouge',
+    title: {
+      "jp": "レッドタートル ある島の物語",
+      "en": "La Tortue Rouge"
+    },
     albumFolder: 'redturtle',
     publicTime: 2016,
     numOfImages: 50,
   },
   {
-    title: '思い出のマーニー',
-    titleEng: 'When Marnie Was There',
+    title: {
+      "jp": "思い出のマーニー",
+      "en": "When Marnie Was There"
+    },
     albumFolder: 'marnie',
     publicTime: 2014,
     numOfImages: 50,
   },
   {
-    title: 'かぐや姫の物語',
-    titleEng: 'The Tale of The Princess Kaguya',
+    title: {
+      "jp": "かぐや姫の物語",
+      "en": "The Tale of The Princess Kaguya"
+    },
     albumFolder: 'kaguyahime',
     publicTime: 2013,
     numOfImages: 50,
   },
   {
-    title: '風立ちぬ',
-    titleEng: 'The Wind Rises',
+    title: {
+      "jp": "風立ちぬ",
+      "en": "The Wind Rises"
+    },
     albumFolder: 'kazetachinu',
     publicTime: 2013,
     numOfImages: 50,
   },
   {
-    title: 'コクリコ坂から',
-    titleEng: 'From Up on Poppy Hill',
+    title: {
+      "jp": "コクリコ坂から",
+      "en": "From Up on Poppy Hill"
+    },
     albumFolder: 'kokurikozaka',
     publicTime: 2011,
     numOfImages: 50,
   },
   {
-    title: '借りぐらしのアリエッティ',
-    titleEng: 'Arrietty',
+    title: {
+      "jp": "借りぐらしのアリエッティ",
+      "en": "Arrietty"
+    },
     albumFolder: 'karigurashi',
     publicTime: 2010,
     numOfImages: 50,
   },
   {
-    title: '崖の上のポニョ',
-    titleEng: 'Ponyo on the Cliff by the Sea',
+    title: {
+      "jp": "崖の上のポニョ",
+      "en": "Ponyo on the Cliff by the Sea"
+    },
     albumFolder: 'ponyo',
     publicTime: 2008,
     numOfImages: 50,
   },
   {
-    title: 'ゲド戦記',
-    titleEng: 'Tales from Earthsea',
+    title: {
+      "jp": "ゲド戦記",
+      "en": "Tales from Earthsea"
+    },
     albumFolder: 'ged',
     publicTime: 2006,
     numOfImages: 50,
   },
   {
-    title: 'ハウルの動く城',
-    titleEng: "Howl's Moving Castle",
+    title: {
+      "jp": "ハウルの動く城",
+      "en": "Howl's Moving Castle"
+    },
     albumFolder: 'howl',
     publicTime: 2004,
     numOfImages: 50,
   },
   {
-    title: '猫の恩返し',
-    titleEng: 'The Cat Returns',
+    title: {
+      "jp": "猫の恩返し",
+      "en": "The Cat Returns"
+    },
     albumFolder: 'baron',
     publicTime: 2002,
     numOfImages: 50,
   },
   {
-    title: 'ギブリーズ episode2',
-    titleEng: 'The Ghiblies episode 2',
+    title: {
+      "jp": "ギブリーズ episode2",
+      "en": "The Ghiblies episode 2"
+    },
     albumFolder: 'ghiblies',
     publicTime: 2002,
     numOfImages: 50,
   },
   {
-    title: '千と千尋の神隠し',
-    titleEng: 'Spirited Away',
+    title: {
+      "jp": "千と千尋の神隠し",
+      "en": "Spirited Away"
+    },
     albumFolder: 'chihiro',
     publicTime: 2001,
     numOfImages: 50,
   },
   {
-    title: 'ホーホケキョ となりの山田くん',
-    titleEng: 'My Neighbors the Yamadas',
+    title: {
+      "jp": "ホーホケキョ となりの山田くん",
+      "en": "My Neighbors the Yamadas"
+    },
     albumFolder: 'yamada',
     publicTime: 1999,
     numOfImages: 50,
   },
   {
-    title: 'もののけ姫',
-    titleEng: 'Princess Mononoke',
+    title: {
+      "jp": "もののけ姫",
+      "en": "Princess Mononoke"
+    },
     albumFolder: 'mononoke',
     publicTime: 1997,
     numOfImages: 50,
   },
   {
-    title: 'On Your Mark',
-    titleEng: 'On Your Mark',
+    title: {
+      "jp": "On Your Mark",
+      "en": "On Your Mark"
+    },
     albumFolder: 'onyourmark',
     publicTime: 1995,
     numOfImages: 28,
   },
   {
-    title: '耳をすませば',
-    titleEng: 'Whisper of the Heart',
+    title: {
+      "jp": "耳をすませば",
+      "en": "Whisper of the Heart"
+    },
     albumFolder: 'mimi',
     publicTime: 1995,
     numOfImages: 50,
   },
   {
-    title: '平成狸合戦ぽんぽこ',
-    titleEng: 'Pom Poko',
+    title: {
+      "jp": "平成狸合戦ぽんぽこ",
+      "en": "Pom Poko"
+    },
     albumFolder: 'tanuki',
     publicTime: 1994,
     numOfImages: 50,
   },
   {
-    title: '海がきこえる',
-    titleEng: 'The Ocean Waves',
+    title: {
+      "jp": "海がきこえる",
+      "en": "The Ocean Waves"
+    },
     albumFolder: 'umi',
     publicTime: 1993,
     numOfImages: 50,
   },
   {
-    title: '紅の豚',
-    titleEng: 'Porco Rosso',
+    title: {
+      "jp": "紅の豚",
+      "en": "Porco Rosso"
+    },
     albumFolder: 'porco',
     publicTime: 1992,
     numOfImages: 50,
   },
   {
-    title: 'おもひでぽろぽろ',
-    titleEng: 'Only Yesterday',
+    title: {
+      "jp": "おもひでぽろぽろ",
+      "en": "Only Yesterday"
+    },
     albumFolder: 'omoide',
     publicTime: 1991,
     numOfImages: 50,
   },
   {
-    title: '魔女の宅急便',
-    titleEng: "Kiki's Delivery Service",
+    title: {
+      "jp": "魔女の宅急便",
+      "en": "Kiki's Delivery Service"
+    },
     albumFolder: 'majo',
     publicTime: 1989,
     numOfImages: 50,
   },
   {
-    title: 'となりのトトロ',
-    titleEng: 'My Neighbor Totoro',
+    title: {
+      "jp": "となりのトトロ",
+      "en": "My Neighbor Totoro"
+    },
     albumFolder: 'totoro',
     publicTime: 1988,
     numOfImages: 50,
   },
   // {
-  // 	title: '火垂るの墓',
-  // titleEng: '',
+  // 	title: {
+  //     "jp": "火垂るの墓",
+  //     "en": "Grave of the Fireflies"
+  //   },
   // 	albumFolder: 'hotarunohaka',
   // 	publicTime: 1988,
   // 	numOfImages: 50
   // },
   {
-    title: '天空の城ラピュタ',
-    titleEng: 'Castle in the Sky',
+    title: {
+      "jp": "天空の城ラピュタ",
+      "en": "Castle in the Sky"
+    },
     albumFolder: 'laputa',
     publicTime: 1986,
     numOfImages: 50,
   },
   {
-    title: '風の谷のナウシカ',
-    titleEng: 'Nausicaä of the Valley of the Wind',
+    title: {
+      "jp": "風の谷のナウシカ",
+      "en": "Nausicaä of the Valley of the Wind"
+    },
     albumFolder: 'nausicaa',
     publicTime: 1984,
     numOfImages: 50,

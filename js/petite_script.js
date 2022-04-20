@@ -13,6 +13,9 @@ const App = {
   get bodyStyle() {
     if (this.isLoading) return 'overflow: hidden;';
   },
+  get numOfImages() {
+    return works[this.currentIdx].numOfImages;
+  },
   init() {
     this.currentIdx = getRandomNum(0, works.length);
   },
@@ -39,13 +42,13 @@ const App = {
         : `0${idx + 1}.jpg`
     }`;
   },
-}
+};
 
 createApp(App).mount();
 
 window.onload = () => {
   App.moveToTop();
   App.endLoading();
-}
+};
 
 window.onscroll = () => App.handleScroll();

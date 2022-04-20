@@ -32,15 +32,17 @@
       <img src="./img/totoro_logo.png">
     </div>
     <div class="container">
-      <div class="catalog">
+      <div
+        class="catalog"
+        @contextmenu.prevent
+        @selectstart.prevent
+        @dragstart.prevent
+      >
         <a
           href="#title"
           v-for="(item, idx) in works"
           :key="item.title"
           @click="changeAlbum(idx)"
-          @contextmenu.prevent
-          @selectstart.prevent
-          @dragstart.prevent
         >
           {{ item.title }}
         </a>
@@ -56,7 +58,7 @@
           ({{ works[currentIdx].publicTime }})
         </h1>
         <img
-          v-for="(num, idx) in works[currentIdx].numsOfImage"
+          v-for="(num, idx) in numOfImages"
           :src="getImgUrl(idx)"
         />
       </section>

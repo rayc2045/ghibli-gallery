@@ -1,6 +1,6 @@
-import { createApp } from 'https://unpkg.com/petite-vue?module';
+import { createApp } from './petite-vue@0.4.1.js';
 import { getParamsByUrl, getRandomNum, isVisible } from './utils.js';
-import works from '/data/works.js';
+import works from '../data/works.js';
 
 const titleEl = document.querySelector('h1');
 const originalHref = window.location.href;

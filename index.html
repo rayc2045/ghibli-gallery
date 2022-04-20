@@ -44,7 +44,7 @@
           :key="item.title"
           @click="changeAlbum(idx)"
         >
-          {{ item.title }}
+          {{ item.title[language] }}
         </a>
       </div>
       <section>
@@ -54,7 +54,7 @@
           @selectstart.prevent
           @dragstart.prevent
         >
-          {{ works[currentIdx].title }}
+          {{ works[currentIdx].title[language] }}
           ({{ works[currentIdx].publicTime }})
         </h1>
         <img

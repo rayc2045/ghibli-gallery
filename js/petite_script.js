@@ -1,5 +1,5 @@
 import { createApp } from 'https://unpkg.com/petite-vue?module';
-import { getRandomNum, isVisible } from './utils.js';
+import { getParamsByUrl, getRandomNum, isVisible } from './utils.js';
 import works from '/data/works.js';
 
 const titleEl = document.querySelector('h1');
@@ -10,6 +10,10 @@ const App = {
   isLoading: true,
   isTopButtonHide: true,
   currentIdx: getRandomNum(0, works.length),
+  get language() {
+    const { en } = getParamsByUrl();
+    return en ? 'en' : 'jp';
+  },
   get bodyStyle() {
     if (this.isLoading) return 'overflow: hidden;';
   },

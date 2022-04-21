@@ -58,7 +58,7 @@
         </h1>
         <img
           v-for="(num, idx) in currentAlbum.numOfImages" :key="idx"
-          :src="getImgUrl(idx)"
+          :src="getImageUrl(idx)"
           loading="lazy"
         />
       </section>
@@ -81,6 +81,6 @@
       </svg>
     </div>
 
-    <script type="module" src="src/scripts/script.js"></script>
+    <script type="module" src="src/scripts/script-min.js"></script>
   </body>
 </html>

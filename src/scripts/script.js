@@ -1,12 +1,16 @@
 import works from '../data/works.js';
 import { createApp } from './petite-vue@0.4.1.js';
 import {
-  getParamsByUrl, getRandomNum, isVisible,
-  getLocalStorage, setLocalStorage, removeLocalStorageKey
+  getParamsByUrl,
+  getRandomNum,
+  isVisible,
+  getLocalStorage,
+  setLocalStorage,
+  removeLocalStorageKey,
 } from './utils.js';
 
 const localStorageKey = 'ghibli-album-id';
-const titleEl = document.querySelector('h1');
+const titleEl = document.querySelector('#title');
 const originalHref = window.location.href;
 
 const App = {
@@ -26,7 +30,7 @@ const App = {
   },
   init() {
     const localAlbumId = getLocalStorage(localStorageKey);
-    if (localAlbumId) return this.currentIdx = localAlbumId;
+    if (localAlbumId) return (this.currentIdx = localAlbumId);
     this.currentIdx = getRandomNum(0, this.works.length);
     this.saveLocalAlbumId();
   },
@@ -41,11 +45,9 @@ const App = {
     window.scrollTo(0, 0);
   },
   getImgUrl(idx) {
-    return `https://www.ghibli.jp/gallery/${this.works[this.currentIdx].albumFolder}${
-      idx < 9
-        ? `00${idx + 1}.jpg`
-        : `0${idx + 1}.jpg`
-    }`;
+    return `https://www.ghibli.jp/gallery/${
+      this.currentAlbum.albumFolder
+    }${String(idx + 1).padStart(3, '0')}.jpg`;
   },
   changeAlbum(idx) {
     this.currentIdx = idx;
@@ -59,7 +61,7 @@ const App = {
   },
   removeLocalAlbumId() {
     removeLocalStorageKey(localStorageKey);
-  }
+  },
 };
 
 createApp(App).mount();

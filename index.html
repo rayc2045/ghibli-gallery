@@ -30,7 +30,7 @@
       @dragstart.prevent
       @animationend="$el.remove()"
     >
-      <img src="./images/totoro_logo.png">
+      <img src="./images/totoro_logo.png" />
     </div>
     <div class="container">
       <div
@@ -40,11 +40,11 @@
         @dragstart.prevent
       >
         <a
-          v-for="(item, idx) in works"
+          v-for="(album, idx) in works"
           href="#title"
           @click="changeAlbum(idx)"
         >
-          {{ item.title[language] }}
+          {{ album.title[language] }}
         </a>
       </div>
       <section>
@@ -54,8 +54,7 @@
           @selectstart.prevent
           @dragstart.prevent
         >
-          {{ currentAlbum.title[language] }}
-          ({{ currentAlbum.publicTime }})
+          {{ currentAlbum.title[language] }} ({{ currentAlbum.publicTime }})
         </h1>
         <img
           v-for="(num, idx) in currentAlbum.numOfImages" :key="idx"
@@ -70,10 +69,7 @@
       @click="moveToTop"
       @selectstart.prevent
     >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 512 512"
-      >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
         <path
           fill="none"
           stroke="currentColor"

@@ -1,8 +1,8 @@
 export default [
   {
     title: {
-      "jp": "レッドタートル ある島の物語",
-      "en": "La Tortue Rouge"
+      jp: "レッドタートル ある島の物語",
+      en: "La Tortue Rouge"
     },
     albumFolder: 'redturtle',
     publicTime: 2016,
@@ -10,8 +10,8 @@ export default [
   },
   {
     title: {
-      "jp": "思い出のマーニー",
-      "en": "When Marnie Was There"
+      jp: "思い出のマーニー",
+      en: "When Marnie Was There"
     },
     albumFolder: 'marnie',
     publicTime: 2014,
@@ -19,8 +19,8 @@ export default [
   },
   {
     title: {
-      "jp": "かぐや姫の物語",
-      "en": "The Tale of The Princess Kaguya"
+      jp: "かぐや姫の物語",
+      en: "The Tale of The Princess Kaguya"
     },
     albumFolder: 'kaguyahime',
     publicTime: 2013,
@@ -28,8 +28,8 @@ export default [
   },
   {
     title: {
-      "jp": "風立ちぬ",
-      "en": "The Wind Rises"
+      jp: "風立ちぬ",
+      en: "The Wind Rises"
     },
     albumFolder: 'kazetachinu',
     publicTime: 2013,
@@ -37,8 +37,8 @@ export default [
   },
   {
     title: {
-      "jp": "コクリコ坂から",
-      "en": "From Up on Poppy Hill"
+      jp: "コクリコ坂から",
+      en: "From Up on Poppy Hill"
     },
     albumFolder: 'kokurikozaka',
     publicTime: 2011,
@@ -46,8 +46,8 @@ export default [
   },
   {
     title: {
-      "jp": "借りぐらしのアリエッティ",
-      "en": "Arrietty"
+      jp: "借りぐらしのアリエッティ",
+      en: "Arrietty"
     },
     albumFolder: 'karigurashi',
     publicTime: 2010,
@@ -55,8 +55,8 @@ export default [
   },
   {
     title: {
-      "jp": "崖の上のポニョ",
-      "en": "Ponyo on the Cliff by the Sea"
+      jp: "崖の上のポニョ",
+      en: "Ponyo on the Cliff by the Sea"
     },
     albumFolder: 'ponyo',
     publicTime: 2008,
@@ -64,8 +64,8 @@ export default [
   },
   {
     title: {
-      "jp": "ゲド戦記",
-      "en": "Tales from Earthsea"
+      jp: "ゲド戦記",
+      en: "Tales from Earthsea"
     },
     albumFolder: 'ged',
     publicTime: 2006,
@@ -73,8 +73,8 @@ export default [
   },
   {
     title: {
-      "jp": "ハウルの動く城",
-      "en": "Howl's Moving Castle"
+      jp: "ハウルの動く城",
+      en: "Howl's Moving Castle"
     },
     albumFolder: 'howl',
     publicTime: 2004,
@@ -82,8 +82,8 @@ export default [
   },
   {
     title: {
-      "jp": "猫の恩返し",
-      "en": "The Cat Returns"
+      jp: "猫の恩返し",
+      en: "The Cat Returns"
     },
     albumFolder: 'baron',
     publicTime: 2002,
@@ -91,8 +91,8 @@ export default [
   },
   {
     title: {
-      "jp": "ギブリーズ episode2",
-      "en": "The Ghiblies episode 2"
+      jp: "ギブリーズ episode2",
+      en: "The Ghiblies episode 2"
     },
     albumFolder: 'ghiblies',
     publicTime: 2002,
@@ -100,8 +100,8 @@ export default [
   },
   {
     title: {
-      "jp": "千と千尋の神隠し",
-      "en": "Spirited Away"
+      jp: "千と千尋の神隠し",
+      en: "Spirited Away"
     },
     albumFolder: 'chihiro',
     publicTime: 2001,
@@ -109,8 +109,8 @@ export default [
   },
   {
     title: {
-      "jp": "ホーホケキョ となりの山田くん",
-      "en": "My Neighbors the Yamadas"
+      jp: "ホーホケキョ となりの山田くん",
+      en: "My Neighbors the Yamadas"
     },
     albumFolder: 'yamada',
     publicTime: 1999,
@@ -118,8 +118,8 @@ export default [
   },
   {
     title: {
-      "jp": "もののけ姫",
-      "en": "Princess Mononoke"
+      jp: "もののけ姫",
+      en: "Princess Mononoke"
     },
     albumFolder: 'mononoke',
     publicTime: 1997,
@@ -127,8 +127,8 @@ export default [
   },
   {
     title: {
-      "jp": "On Your Mark",
-      "en": "On Your Mark"
+      jp: "On Your Mark",
+      en: "On Your Mark"
     },
     albumFolder: 'onyourmark',
     publicTime: 1995,
@@ -136,8 +136,8 @@ export default [
   },
   {
     title: {
-      "jp": "耳をすませば",
-      "en": "Whisper of the Heart"
+      jp: "耳をすませば",
+      en: "Whisper of the Heart"
     },
     albumFolder: 'mimi',
     publicTime: 1995,
@@ -145,8 +145,8 @@ export default [
   },
   {
     title: {
-      "jp": "平成狸合戦ぽんぽこ",
-      "en": "Pom Poko"
+      jp: "平成狸合戦ぽんぽこ",
+      en: "Pom Poko"
     },
     albumFolder: 'tanuki',
     publicTime: 1994,
@@ -154,8 +154,8 @@ export default [
   },
   {
     title: {
-      "jp": "海がきこえる",
-      "en": "The Ocean Waves"
+      jp: "海がきこえる",
+      en: "The Ocean Waves"
     },
     albumFolder: 'umi',
     publicTime: 1993,
@@ -163,8 +163,8 @@ export default [
   },
   {
     title: {
-      "jp": "紅の豚",
-      "en": "Porco Rosso"
+      jp: "紅の豚",
+      en: "Porco Rosso"
     },
     albumFolder: 'porco',
     publicTime: 1992,
@@ -172,8 +172,8 @@ export default [
   },
   {
     title: {
-      "jp": "おもひでぽろぽろ",
-      "en": "Only Yesterday"
+      jp: "おもひでぽろぽろ",
+      en: "Only Yesterday"
     },
     albumFolder: 'omoide',
     publicTime: 1991,
@@ -181,8 +181,8 @@ export default [
   },
   {
     title: {
-      "jp": "魔女の宅急便",
-      "en": "Kiki's Delivery Service"
+      jp: "魔女の宅急便",
+      en: "Kiki's Delivery Service"
     },
     albumFolder: 'majo',
     publicTime: 1989,
@@ -190,8 +190,8 @@ export default [
   },
   {
     title: {
-      "jp": "となりのトトロ",
-      "en": "My Neighbor Totoro"
+      jp: "となりのトトロ",
+      en: "My Neighbor Totoro"
     },
     albumFolder: 'totoro',
     publicTime: 1988,
@@ -199,8 +199,8 @@ export default [
   },
   // {
   // 	title: {
-  //     "jp": "火垂るの墓",
-  //     "en": "Grave of the Fireflies"
+  //     jp: "火垂るの墓",
+  //     en: "Grave of the Fireflies"
   //   },
   // 	albumFolder: 'hotarunohaka',
   // 	publicTime: 1988,
@@ -208,8 +208,8 @@ export default [
   // },
   {
     title: {
-      "jp": "天空の城ラピュタ",
-      "en": "Castle in the Sky"
+      jp: "天空の城ラピュタ",
+      en: "Castle in the Sky"
     },
     albumFolder: 'laputa',
     publicTime: 1986,
@@ -217,8 +217,8 @@ export default [
   },
   {
     title: {
-      "jp": "風の谷のナウシカ",
-      "en": "Nausicaä of the Valley of the Wind"
+      jp: "風の谷のナウシカ",
+      en: "Nausicaä of the Valley of the Wind"
     },
     albumFolder: 'nausicaa',
     publicTime: 1984,

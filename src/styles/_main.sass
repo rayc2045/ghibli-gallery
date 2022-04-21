@@ -1,0 +1,42 @@
+.container
+	width: 83.28125vw
+	+mobile
+		width: 100vw
+
+.catalog
+	margin-top: 7rem
+	padding: 0 15%
+	text-align: center
+	+mobile
+		margin-top: 4rem
+	a
+		margin: 0.3rem
+		padding: 0.18rem 0.9rem
+		display: inline-block
+		font-size: 1.5rem
+		color: $white
+		background-color: rgba($white, 0.1)
+		text-decoration: none
+		cursor: pointer
+		transition: background-color 0.4s
+		&:hover
+			background-color: rgba($white, 0.25)
+	
+section
+	padding: 0.7rem
+	padding-top: 0
+	text-align: center
+	h1
+		margin-top: 0
+		padding-top: 3rem
+		font-size: 3.2rem
+		font-weight: 600
+		+mobile
+			font-size: 2.8rem
+	img
+		margin: 0.7%
+		width: calc(50% - 0.7% * 2)
+		cursor: pointer
+		+mobile
+			width: 98.6%
+			cursor: default

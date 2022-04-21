@@ -1,4 +1,4 @@
-import { createApp } from './petite-vue@0.4.1.js';
+import { createApp, reactive } from './petite-vue@0.4.1.js';
 import { getParamsByUrl, getRandomNum, isVisible } from './utils.js';
 import works from '../data/works.js';
 
@@ -18,8 +18,48 @@ const albumIdxStorage = {
   },
 };
 
+const Slider = reactive({
+  isShow: false,
+  currentImageUrl: '',
+  get max() {
+    return works.filter(album =>
+      this.currentImageUrl.includes(album.albumFolder)
+    )[0].numOfImages;
+  },
+  get currentImageIdx() {
+    return Number(this.currentImageUrl.slice(-7).split('.')[0]);
+  },
+  showSlider(url) {
+    this.isShow = true;
+    this.currentImageUrl = url;
+  },
+  prev() {
+    const prevPadIdx = `${String(
+      this.currentImageIdx === 1 ? this.max : this.currentImageIdx - 1
+    ).padStart(3, '0')}.jpg`;
+    this.currentImageUrl = this.currentImageUrl.replace(
+      this.currentImageUrl.slice(-7),
+      prevPadIdx
+    );
+  },
+  next() {
+    const nextPadIdx = `${String(
+      this.currentImageIdx === this.max ? 1 : this.currentImageIdx + 1
+    ).padStart(3, '0')}.jpg`;
+
+    this.currentImageUrl = this.currentImageUrl.replace(
+      this.currentImageUrl.slice(-7),
+      nextPadIdx
+    );
+  },
+  close() {
+    this.isShow = false;
+  },
+});
+
 const App = {
   works,
+  Slider,
   isLoading: true,
   isTopButtonHide: true,
   currentAlbumIdx: 0,
@@ -31,7 +71,7 @@ const App = {
     return this.works[this.currentAlbumIdx];
   },
   get bodyStyle() {
-    if (this.isLoading) return 'overflow: hidden;';
+    if (this.isLoading || Slider.isShow) return 'overflow: hidden;';
   },
   init() {
     const localAlbumIdx = albumIdxStorage.fetch();
@@ -71,5 +111,6 @@ window.onload = () => {
 };
 
 window.onscroll = () => App.handleScroll();
+window.onresize = () => (Slider.isShow = false);
 window.onfocus = () => albumIdxStorage.save(App.currentAlbumIdx);
 window.onblur = () => albumIdxStorage.remove();

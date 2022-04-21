@@ -1,0 +1,21 @@
+.loading
+	position: fixed
+	left: 0
+	top: 0
+	width: 100vw
+	height: 100vh
+	background-color: $blue
+	overscroll-behavior: contain
+	img
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
+		width: 80rem
+		// filter: invert(90%)
+		pointer-events: none
+		+mobile
+			width: 100%
+	&.animate
+		animation: fadeOut 1s forwards
+		pointer-events: none

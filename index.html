@@ -60,12 +60,14 @@
           v-for="(num, idx) in currentAlbum.numOfImages" :key="idx"
           :src="getImageUrl(idx)"
           loading="lazy"
+          @click="Slider.showSlider(getImageUrl(idx))"
         />
       </section>
     </div>
+
     <div
-      :class="['to-top-button', { hide: isTopButtonHide }]"
       v-show="!isLoading"
+      :class="['to-top-button', { hide: isTopButtonHide }]"
       @click="moveToTop"
       @selectstart.prevent
     >
@@ -79,6 +81,13 @@
           d="M112 328l144-144 144 144"
         />
       </svg>
+    </div>
+
+    <div v-show="Slider.isShow" class="slider">
+      <div class="prev" @click="Slider.prev" @keypress.left="Slider.prev"><</div>
+      <div class="next" @click="Slider.next" @keypress.right="Slider.next">></div>
+      <div class="close" @click="Slider.close">=</div>
+      <img :src="Slider.currentImageUrl" />
     </div>
 
     <script type="module" src="src/scripts/script-min.js"></script>

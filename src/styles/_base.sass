@@ -1,0 +1,26 @@
+::selection
+	background-color: rgba($white, 0.5)
+
+::-webkit-scrollbar
+	width: 0
+
+*
+	box-sizing: border-box
+
+html, body
+	margin: 0
+	user-select: none
+
+html
+	font-family: 'Noto Serif JP', serif
+	font-size: 0.83vw
+	scroll-behavior: smooth
+	scrollbar-width: none
+	+mobile
+		font-size: 12px
+
+body
+	display: flex
+	justify-content: center
+	color: $white
+	background-color: $black

@@ -11,12 +11,12 @@
 - 依照動畫出版年份和作品劇照的網址命名邏輯，整合出新的作品劇照資料
 - 網頁載入時加入 Loading 畫面，加深使用者對吉卜力工作室的品牌印象，並預設瀏覽位置回到最上方
 - 使用 [Noto Serif JP](https://fonts.google.com/specimen/Noto+Serif+JP) 字體，統一日文、英文和數字基線
-- 透過在網址後加入 `?en`，輕鬆切換 [英文](https://ghibli-gallery.netlify.app/?en)、[日文](https://ghibli-gallery.netlify.app/) 介面
+- 透過在網址後加入 `?en` 參數，輕鬆切換 [英文](https://ghibli-gallery.netlify.app/?en)、[日文](https://ghibli-gallery.netlify.app/) 介面
 - 透過點擊作品目錄切換動畫劇照，達成不換頁觀看
 - 將原本吉卜力工作室官網散佈式的劇照改為兩欄並排 (平板與手機則ㄧ欄) 並配合深色主題呈現，視覺上更為精緻且能長久觀看
 
 ### 開發紀錄
-- 自製 [動畫作品劇照資料](https://github.com/rayc2045/ghibli-gallery/blob/main/data/works.js)
+- 自製 [吉卜力動畫作品劇照資料](https://github.com/rayc2045/ghibli-gallery/blob/main/data/works.js)
 - 使用相似於 [Preact](https://preactjs.com/) 的 micro-library [petite-vue](https://github.com/vuejs/petite-vue)，開發無需 build
 - 將通用型程式碼與專案用程式碼進行拆分，需要時再模組化引入做使用 (module import)
 - RWD 響應式設計上使用 `rem` 單位配合 Media Query 呈現，達成任意縮放螢幕、元素單位比例也能自適應

@@ -60,6 +60,7 @@
         <img
           v-for="(num, idx) in currentAlbum.numOfImages" :key="idx"
           :src="getImgUrl(idx)"
+          loading="lazy"
         />
       </section>
     </div>

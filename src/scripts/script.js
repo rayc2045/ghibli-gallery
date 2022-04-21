@@ -66,7 +66,7 @@ createApp(App).mount();
 
 window.onload = () => {
   App.moveToTop();
-  App.endLoading();
+  App.endLoading(1);
 };
 
 window.onscroll = () => App.handleScroll();

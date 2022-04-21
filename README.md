@@ -11,7 +11,7 @@
 - 依照動畫出版年份和作品劇照的網址命名邏輯，整合出新的作品劇照資料
 - 網頁載入時加入 Loading 畫面，加深使用者對吉卜力工作室的品牌印象，並預設瀏覽位置回到最上方
 - 使用 [Noto Serif JP](https://fonts.google.com/specimen/Noto+Serif+JP) 字體，統一日文、英文和數字基線
-- 透過在網址後加入 `?en` 參數，輕鬆切換 [英文](https://ghibli-gallery.netlify.app/?en)、[日文](https://ghibli-gallery.netlify.app/) 介面
+- 將網站設計為可在網址後加入 Query String 參數 `en`，輕鬆切換 [英文](https://ghibli-gallery.netlify.app/?en)、[日文](https://ghibli-gallery.netlify.app/) 介面
 - 透過點擊作品目錄切換動畫劇照，達成不換頁觀看
 - 將原本吉卜力工作室官網散佈式的劇照改為兩欄並排 (平板與手機則ㄧ欄) 並配合深色主題呈現，視覺上更為精緻且能長久觀看
 

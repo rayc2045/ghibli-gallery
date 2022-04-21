@@ -19,7 +19,8 @@
   <body
     v-cloak
     :style="bodyStyle"
-    @mount="init"
+    @vue:mounted="init"
+    @vue:unmounted="removeLocalAlbumId"
   >
     <div
       :class="['loading', { animate: !isLoading }]"
@@ -53,11 +54,11 @@
           @selectstart.prevent
           @dragstart.prevent
         >
-          {{ works[currentIdx].title[language] }}
-          ({{ works[currentIdx].publicTime }})
+          {{ currentAlbum.title[language] }}
+          ({{ currentAlbum.publicTime }})
         </h1>
         <img
-          v-for="(num, idx) in numOfImages" :key="idx"
+          v-for="(num, idx) in currentAlbum.numOfImages" :key="idx"
           :src="getImgUrl(idx)"
         />
       </section>

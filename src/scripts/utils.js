@@ -10,6 +10,18 @@ export function getParamsByUrl(url = window.location.href) {
   return entries;
 }
 
+export function getLocalStorage(key) {
+  return JSON.parse(localStorage.getItem(key));
+}
+
+export function setLocalStorage(key, value) {
+  localStorage.setItem(key, JSON.stringify(value));
+}
+
+export function removeLocalStorageKey(key) {
+  localStorage.removeItem(key);
+}
+
 export function getRandomNum(min, max) {
   return Math.floor(Math.random() * max) + min;
 }

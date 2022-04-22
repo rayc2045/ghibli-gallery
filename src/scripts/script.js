@@ -37,6 +37,7 @@ const Slider = reactive({
     const prevPadIdx = `${String(
       this.currentImageIdx === 1 ? this.max : this.currentImageIdx - 1
     ).padStart(3, '0')}.jpg`;
+
     this.currentImageUrl = this.currentImageUrl.replace(
       this.currentImageUrl.slice(-7),
       prevPadIdx
@@ -71,13 +72,16 @@ const App = {
     return this.works[this.currentAlbumIdx];
   },
   get bodyStyle() {
-    if (this.isLoading || Slider.isShow) return 'overflow: hidden;';
+    if (this.isLoading) return 'overflow: hidden;';
+    if (Slider.isShow) return 'overflow: hidden;';
+    return '';
   },
   init() {
     const localAlbumIdx = albumIdxStorage.fetch();
     if (localAlbumIdx) return (this.currentAlbumIdx = localAlbumIdx);
     this.currentAlbumIdx = getRandomNum(0, this.works.length);
     albumIdxStorage.save(this.currentAlbumIdx);
+    Slider.currentImageUrl = this.getImageUrl(0);
   },
   endLoading(sec) {
     setTimeout(() => (this.isLoading = false), sec * 1000);
@@ -111,6 +115,6 @@ window.onload = () => {
 };
 
 window.onscroll = () => App.handleScroll();
-window.onresize = () => (Slider.isShow = false);
+window.onresize = () => Slider.close();
 window.onfocus = () => albumIdxStorage.save(App.currentAlbumIdx);
 window.onblur = () => albumIdxStorage.remove();

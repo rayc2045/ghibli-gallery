@@ -88,6 +88,7 @@
       <div class="next" @click="Slider.next" @keypress.right="Slider.next">></div>
       <div class="close" @click="Slider.close">=</div>
       <img :src="Slider.currentImageUrl" />
+      <p>{{ Slider.currentImageIdx }} / {{ currentAlbum.numOfImages }}</p>
     </div>
 
     <script type="module" src="src/scripts/script-min.js"></script>

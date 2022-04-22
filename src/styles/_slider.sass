@@ -6,7 +6,7 @@
   flex-direction: column
   width: 100vw
   height: 100vh
-  font-size: 7rem
+  font-size: 6rem
   color: $white
   background-color: $black
   +mobile
@@ -14,7 +14,7 @@
   .prev, .next, .close
     position: absolute
     cursor: pointer
-    opacity: .7
+    opacity: .6
     transition: all .3s
     &:hover
       opacity: 1
@@ -22,22 +22,21 @@
     top: 50%
     transform: translateY(-50%)
   .prev
-    left: 3.6rem
+    left: 4rem
   .next
-    right: 3.6rem
+    right: 4rem
   .close
-    right: 4.1rem
-    top: 1rem
+    right: 4.2rem
+    top: 1vh
     font-size: .8em
-    opacity: .6
   img
-    aspect-ratio: 16 / 9
-    // width: 81%
-    width: 75%
+    // margin-top: 1.5rem
+    width: 81%
+    // aspect-ratio: 16 / 9
     // border: .3rem solid rgba($white, .8)
+    animation: fadeIn 1.5s ease
   p
     margin: 0
-    margin-top: 1em
+    margin-top: 1rem
     font-size: .3em
-    // font-family: sans-serif
-    letter-spacing: .2em
+    letter-spacing: .2rem

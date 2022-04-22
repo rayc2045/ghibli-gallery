@@ -20,11 +20,10 @@ const albumIdxStorage = {
 
 const Slider = reactive({
   isShow: false,
-  currentImageUrl: '',
+  currentImageUrl: 'https://www.ghibli.jp/gallery/chihiro001.jpg',
   get max() {
-    return works.filter(album =>
-      this.currentImageUrl.includes(album.albumFolder)
-    )[0].numOfImages;
+    return works.find(album => this.currentImageUrl.includes(album.albumFolder))
+      .numOfImages;
   },
   get currentImageIdx() {
     return Number(this.currentImageUrl.slice(-7).split('.')[0]);
@@ -61,13 +60,10 @@ const Slider = reactive({
 const App = {
   works,
   Slider,
+  language: getParamsByUrl().en ? 'en' : 'jp',
   isLoading: true,
   isTopButtonHide: true,
   currentAlbumIdx: 0,
-  get language() {
-    const { en } = getParamsByUrl();
-    return en ? 'en' : 'jp';
-  },
   get currentAlbum() {
     return this.works[this.currentAlbumIdx];
   },
@@ -81,7 +77,6 @@ const App = {
     if (localAlbumIdx) return (this.currentAlbumIdx = localAlbumIdx);
     this.currentAlbumIdx = getRandomNum(0, this.works.length);
     albumIdxStorage.save(this.currentAlbumIdx);
-    Slider.currentImageUrl = this.getImageUrl(0);
   },
   endLoading(sec) {
     setTimeout(() => (this.isLoading = false), sec * 1000);

@@ -14,6 +14,7 @@
 - 將網站設計為可在網址後加入 Query String 參數 `en`，輕鬆切換 [英文](https://ghibli-gallery.netlify.app/?en)、[日文](https://ghibli-gallery.netlify.app/) 介面
 - 透過點擊作品目錄切換動畫劇照，達成不換頁觀看
 - 將原本吉卜力工作室官網散佈式的劇照改為兩欄並排 (平板與手機則ㄧ欄) 並配合深色主題呈現，視覺上更為精緻且能長久觀看
+- 使用平板尺寸以上的設備觀看時，可透過點擊劇照進入劇院模式
 
 ### 開發紀錄
 - 自製 [吉卜力動畫作品劇照資料](https://github.com/rayc2045/ghibli-gallery/blob/main/data/works.js)

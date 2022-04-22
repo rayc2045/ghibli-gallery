@@ -19,5 +19,5 @@
 ### 開發紀錄
 - 自製 [吉卜力動畫作品劇照資料](https://github.com/rayc2045/ghibli-gallery/blob/main/data/works.js)
 - 使用相似於 [Preact](https://preactjs.com/) 的 micro-library [petite-vue](https://github.com/vuejs/petite-vue)，開發無需 build
-- 將通用型程式碼與專案用程式碼進行拆分，需要時再模組化引入做使用 (module import)
+- 樣式與功能性程式碼皆以模組化方式進行拆分管理
 - RWD 響應式設計上使用 `rem` 單位配合 Media Query 呈現，達成任意縮放螢幕、元素單位比例也能自適應

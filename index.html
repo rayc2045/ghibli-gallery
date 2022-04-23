@@ -23,7 +23,7 @@
     @vue:unmounted="removeLocalAlbumId"
   >
     <div
-      :class="['loading', { animate: !isLoading }]"
+      :class="['loader', { animate: !isLoading }]"
       @touchstart.prevent
       @contextmenu.prevent
       @selectstart.prevent
@@ -88,7 +88,7 @@
       <div class="next" @click="Slider.next" @keypress.right="Slider.next">></div>
       <div class="close" @click="Slider.close">=</div>
       <img :src="Slider.currentImageUrl" />
-      <!-- <p>{{ Slider.currentImageIdx }} / {{ Slider.max }}</p> -->
+      <p>{{ Slider.progress }}</p>
     </div>
 
     <script type="module" src="src/scripts/script-min.js"></script>

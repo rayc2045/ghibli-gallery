@@ -28,6 +28,12 @@ const Slider = reactive({
   get currentImageIdx() {
     return Number(this.currentImageUrl.slice(-7).split('.')[0]);
   },
+  get progress() {
+    return `${String(this.currentImageIdx).padStart(
+      String(this.max).length,
+      '0'
+    )} / ${this.max}`;
+  },
   showSlider(url) {
     this.isShow = true;
     this.currentImageUrl = url;

@@ -60,7 +60,7 @@
           v-for="(num, idx) in currentAlbum.numOfImages" :key="idx"
           :src="getImageUrl(idx)"
           loading="lazy"
-          @click="Slider.showSlider(getImageUrl(idx))"
+          @click="bodyWidth >= 1080 ? Slider.showSlider(getImageUrl(idx)) : false"
         />
       </section>
     </div>

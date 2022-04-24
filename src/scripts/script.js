@@ -78,6 +78,9 @@ const App = {
     if (Slider.isShow) return 'overflow: hidden;';
     return '';
   },
+  get bodyWidth() {
+    return document.body.clientWidth;
+  },
   init() {
     const localAlbumIdx = albumIdxStorage.fetch();
     if (localAlbumIdx) return (this.currentAlbumIdx = localAlbumIdx);

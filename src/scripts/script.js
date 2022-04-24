@@ -20,6 +20,7 @@ const albumIdxStorage = {
 
 const Slider = reactive({
   isShow: false,
+  isCloseButtonShow: false,
   currentImageUrl: 'https://www.ghibli.jp/gallery/chihiro001.jpg',
   get max() {
     return works.find(album => this.currentImageUrl.includes(album.albumFolder))
@@ -37,6 +38,11 @@ const Slider = reactive({
   showSlider(url) {
     this.isShow = true;
     this.currentImageUrl = url;
+  },
+  handleMouseMove() {
+    if (this.isCloseButtonShow) return;
+    this.isCloseButtonShow = true;
+    setTimeout(() => (this.isCloseButtonShow = false), 2000);
   },
   prev() {
     const prevPadIdx = `${String(
@@ -59,7 +65,7 @@ const Slider = reactive({
     );
   },
   close() {
-    this.isShow = false;
+    this.isShow = this.isCloseButtonShow = false;
   },
 });
 

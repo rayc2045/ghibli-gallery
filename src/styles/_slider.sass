@@ -13,7 +13,7 @@
     position: absolute
     cursor: pointer
     opacity: .6
-    transition: all .3s
+    transition: opacity .3s
     &:hover
       opacity: 1
   .prev, .next
@@ -24,9 +24,15 @@
   .next
     right: 4rem
   .close
-    right: 4.2rem
-    top: 1vh
-    font-size: .8em
+    right: 4rem
+    top: 1rem
+    font-size: .65em
+    &:hover
+      opacity: .9
+  .close.transparent
+    opacity: 0
+    &:hover
+      opacity: .9
   img
     margin-top: 2rem
     width: 81%

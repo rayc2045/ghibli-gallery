@@ -23,7 +23,7 @@
     @vue:unmounted="removeLocalAlbumId"
   >
     <div
-      :class="['loader', { animate: !isLoading }]"
+      :class="['loader', { 'fade-out': !isLoading }]"
       @touchstart.prevent
       @contextmenu.prevent
       @selectstart.prevent
@@ -83,10 +83,18 @@
       </svg>
     </div>
 
-    <div v-show="Slider.isShow" class="slider">
+    <div
+      v-show="Slider.isShow"
+      class="slider"
+      @mousemove="Slider.handleMouseMove"
+    >
       <div class="prev" @click="Slider.prev" @keypress.left="Slider.prev"><</div>
       <div class="next" @click="Slider.next" @keypress.right="Slider.next">></div>
-      <div class="close" @click="Slider.close">=</div>
+      <div
+        :class="['close', { transparent: !Slider.isCloseButtonShow }]"
+        @click="Slider.close"
+        @keypress.esc="Slider.close"
+      >✕</div>
       <img :src="Slider.currentImageUrl" />
       <p>{{ Slider.progress }}</p>
     </div>

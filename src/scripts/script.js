@@ -4,6 +4,7 @@ import works from '../data/works.js';
 
 const titleEl = document.querySelector('#title');
 const originalHref = window.location.href;
+const galleryEndpoint = 'https://www.ghibli.jp/gallery/';
 
 const STORAGE_KEY = 'ghibli-album-id';
 const albumIdxStorage = {
@@ -21,7 +22,7 @@ const albumIdxStorage = {
 const Slider = reactive({
   isShow: false,
   isCloseButtonShow: false,
-  currentImageUrl: 'https://www.ghibli.jp/gallery/chihiro001.jpg',
+  currentImageUrl: `${galleryEndpoint}${works[0].albumFolder}001.jpg`,
   get max() {
     return works.find(album => this.currentImageUrl.includes(album.albumFolder))
       .numOfImages;
@@ -87,6 +88,14 @@ const App = {
   get bodyWidth() {
     return document.body.clientWidth;
   },
+  // get compressedImageWidth() {
+  //   if (this.bodyWidth < 1080) return Math.floor(this.bodyWidth * 98.6 / 100);
+  //   const originalImageWidth = 1920;
+  //   const calcImageWidth = Math.floor(this.bodyWidth * (50 - 0.7 * 2) / 100);
+  //   return calcImageWidth < originalImageWidth
+  //     ? calcImageWidth
+  //     : originalImageWidth;
+  // },
   init() {
     const localAlbumIdx = albumIdxStorage.fetch();
     if (localAlbumIdx) return (this.currentAlbumIdx = localAlbumIdx);
@@ -104,9 +113,9 @@ const App = {
     window.scrollTo(0, 0);
   },
   getImageUrl(idx) {
-    return `https://www.ghibli.jp/gallery/${
-      this.currentAlbum.albumFolder
-    }${String(idx + 1).padStart(3, '0')}.jpg`;
+    return `${galleryEndpoint}${this.currentAlbum.albumFolder}${
+      String(idx + 1).padStart(3, '0')
+    }.jpg`;
   },
   changeAlbum(idx) {
     this.currentAlbumIdx = idx;

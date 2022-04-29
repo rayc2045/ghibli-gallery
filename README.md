@@ -22,4 +22,4 @@
 - 使用相似於 [Preact](https://preactjs.com/) 的 micro-library [petite-vue](https://github.com/vuejs/petite-vue)，開發無需 build
 - 樣式與功能性程式碼皆以模組化方式進行拆分管理
 - RWD 響應式設計上使用 `rem` 單位配合 Media Query 呈現，達成任意縮放螢幕、元素單位比例也能自適應
-- 使用 Terser 壓縮工具搭配 IIFE 立即函式壓縮 JavaScript 程式碼
+- 使用壓縮工具 Terser 搭配 IIFE 立即函式壓縮 JavaScript 程式碼

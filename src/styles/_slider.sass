@@ -11,22 +11,30 @@
   background-color: $black
   .prev, .next, .close
     position: absolute
+    width: 1em
+    height: 1em
+    display: flex
+    justify-content: center
+    align-items: center
     cursor: pointer
-    opacity: .6
+    opacity: .7
     transition: opacity .3s
     &:hover
       opacity: 1
+    img // icon
+      margin: 0
+      filter: invert(1)
   .prev, .next
     top: 50%
     transform: translateY(-50%)
     font-size: 2em
   .prev
-    left: 12.5rem
+    left: 12rem
   .next
-    right: 12.5rem
+    right: 12rem
   .close
-    right: 4rem
-    top: 2rem
+    right: 3rem
+    top: 3rem
     font-size: 1.3em
     &:hover
       opacity: .9

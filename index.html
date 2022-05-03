@@ -88,13 +88,19 @@
       class="slider"
       @mousemove="Slider.handleMouseMove"
     >
-      <div class="prev" @click="Slider.prev" @keypress.left="Slider.prev"><</div>
-      <div class="next" @click="Slider.next" @keypress.right="Slider.next">></div>
+      <div class="prev" @click="Slider.prev" @keypress.left="Slider.prev">
+        <img src="./images/prev.svg" />
+      </div>
+      <div class="next" @click="Slider.next" @keypress.right="Slider.next">
+        <img src="./images/next.svg" />
+      </div>
       <div
         :class="['close', { transparent: !Slider.isCloseButtonShow }]"
         @click="Slider.close"
         @keypress.esc="Slider.close"
-      >✕</div>
+      >
+        <img src="./images/close.svg" />
+      </div>
       <img :src="Slider.currentImageUrl" />
       <p>{{ Slider.progress }}</p>
     </div>

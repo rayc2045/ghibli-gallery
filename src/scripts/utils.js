@@ -1,13 +1,12 @@
 export function getParamsByUrl(url = window.location.href) {
-  const urlSearch = url.split('?')[1];
+  const [urlSearch, params] = [url.split('?')[1], {}];
   const urlSearchParams = new URLSearchParams(urlSearch);
-  const entries = Object.fromEntries(urlSearchParams.entries());
-  Object.keys(entries).forEach(entry => {
-    const split = entries[entry].split(' ');
-    if (split.length === 1 && split[0] === '') return (entries[entry] = []);
-    entries[entry] = split;
-  });
-  return entries;
+  for (const [key, value] of urlSearchParams.entries()) {
+    value
+      ? params[key] = value.split(' ')
+      : params[key] = [];
+  }
+  return params;
 }
 
 export function getRandomNum(min, max) {

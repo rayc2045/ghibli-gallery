@@ -15,6 +15,7 @@
         display: none;
       }
     </style>
+    <script src="src/scripts/script-min.js" type="module"></script>
   </head>
   <body
     v-cloak
@@ -33,21 +34,21 @@
       <img src="./images/totoro_logo.png" />
     </div>
     <div class="container">
-      <div
+      <nav
         class="catalog"
         @contextmenu.prevent
         @selectstart.prevent
         @dragstart.prevent
       >
         <a
-          v-for="(album, idx) in works"
+          v-for="(album, idx) of works"
           href="#title"
           @click="changeAlbum(idx)"
         >
           {{ album.title[language] }}
         </a>
-      </div>
-      <section>
+      </nav>
+      <main>
         <h1
           id="title"
           @contextmenu.prevent
@@ -56,13 +57,18 @@
         >
           {{ currentAlbum.title[language] }} ({{ currentAlbum.publicTime }})
         </h1>
-        <img
-          v-for="(num, idx) in currentAlbum.numOfImages" :key="idx"
-          :src="getImageUrl(idx)"
-          loading="lazy"
-          @click="bodyWidth >= 1080 ? Slider.showSlider(getImageUrl(idx)) : false"
-        />
-      </section>
+        <section
+          v-for="album of works"
+          v-show="album.albumFolder === currentAlbum.albumFolder"
+        >
+          <img
+            v-for="(num, idx) in album.numOfImages" :key="idx"
+            :src="getImageUrl(idx)"
+            loading="lazy"
+            @click="bodyWidth >= 1080 ? Slider.showSlider(getImageUrl(idx)) : false"
+          />
+        </section>
+      </main>
     </div>
 
     <div
@@ -104,7 +110,5 @@
       <img :src="Slider.currentImageUrl" />
       <p>{{ Slider.progress }}</p>
     </div>
-
-    <script type="module" src="src/scripts/script-min.js"></script>
   </body>
 </html>
